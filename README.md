@@ -1,2 +1,2 @@
-# 09-Juicy-Breakout
-Godot 2D independent project
+# Project-Template-Godot
+A generic template for a Godot project
