@@ -17,6 +17,7 @@ func _physics_process(delta):
 	for body in bodies:
 		if body.is_in_group("Tiles"):
 			emit_signal("score", body.score)
+			body.find_node("Coins").emitting = true
 			body.queue_free()
 		if body.get_name() == "Formula":
 			pass
