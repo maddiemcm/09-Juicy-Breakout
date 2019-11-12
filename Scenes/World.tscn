@@ -26,38 +26,10 @@ font_data = ExtResource( 8 )
 [node name="World" type="Node2D"]
 script = ExtResource( 1 )
 
-[node name="Sprite" type="Sprite" parent="."]
+[node name="background" type="Sprite" parent="."]
 position = Vector2( 510, 308.141 )
 scale = Vector2( 1.59375, 1.68118 )
 texture = ExtResource( 2 )
-
-[node name="Crabs" type="KinematicBody2D" parent="."]
-editor/display_folded = true
-position = Vector2( 529.507, 542.868 )
-script = ExtResource( 3 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Sprite" type="Sprite" parent="Crabs"]
-position = Vector2( -0.0613708, 0.185822 )
-scale = Vector2( 0.552302, 0.598512 )
-texture = ExtResource( 4 )
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Crabs"]
-position = Vector2( 0.0880737, 0.365524 )
-scale = Vector2( 0.79286, 0.800648 )
-polygon = PoolVector2Array( -42.4013, -15.5264, -41.0004, -29.5279, -60.7786, -28.0229, -70.1592, -14.3653, -31.6696, 18.2925, -29.1697, 32.9896, -16.6732, 43.2809, -15.2029, 52.8371, 11.2604, 52.8371, 12.7305, 43.2809, 23.7569, 35.1949, 27.8143, 15.9598, 65.1375, -12.0326, 59.3058, -29.5279, 38.3115, -31.8606, 37.7236, -14.0562, 38.4587, -14.7913, 23.1489, 6.62897, 10.5253, -31.6984, -18.1433, -32.4335, -23.5051, 6.62897 )
-
-[node name="Formula" parent="." instance=ExtResource( 5 )]
-mass = 0.959184
-linear_velocity = Vector2( 210, -210 )
-
-[node name="Wall" type="StaticBody2D" parent="."]
-editor/display_folded = true
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wall"]
-polygon = PoolVector2Array( 0, 0, 0, 660, -60, 660, -60, -60, 1080, -60, 1080, 660, 1020, 660, 1020, 0, 0, 0 )
 
 [node name="Transparent background" type="Node2D" parent="."]
 editor/display_folded = true
@@ -105,8 +77,35 @@ margin_top = 39.0
 margin_right = 702.0
 margin_bottom = 79.0
 
-[node name="Tiles" type="Node2D" parent="."]
+[node name="Crabs" type="KinematicBody2D" parent="."]
 editor/display_folded = true
+position = Vector2( 529.507, 542.868 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Crabs"]
+position = Vector2( -0.0613708, 0.185822 )
+scale = Vector2( 0.552302, 0.598512 )
+texture = ExtResource( 4 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Crabs"]
+position = Vector2( 0.0880737, 0.365524 )
+scale = Vector2( 0.79286, 0.800648 )
+polygon = PoolVector2Array( -42.4013, -15.5264, -41.0004, -29.5279, -60.7786, -28.0229, -70.1592, -14.3653, -31.6696, 18.2925, -29.1697, 32.9896, -16.6732, 43.2809, -15.2029, 52.8371, 11.2604, 52.8371, 12.7305, 43.2809, 23.7569, 35.1949, 27.8143, 15.9598, 65.1375, -12.0326, 59.3058, -29.5279, 38.3115, -31.8606, 37.7236, -14.0562, 38.4587, -14.7913, 23.1489, 6.62897, 10.5253, -31.6984, -18.1433, -32.4335, -23.5051, 6.62897 )
+
+[node name="Formula" parent="." instance=ExtResource( 5 )]
+mass = 0.959184
+linear_velocity = Vector2( 210, -210 )
+
+[node name="Wall" type="StaticBody2D" parent="."]
+editor/display_folded = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wall"]
+polygon = PoolVector2Array( 0, 0, 0, 660, -60, 660, -60, -60, 1080, -60, 1080, 660, 1020, 660, 1020, 0, 0, 0 )
+
+[node name="Tiles" type="Node2D" parent="."]
 position = Vector2( 0, 0.814514 )
 
 [node name="Tile 1" type="Node2D" parent="Tiles"]

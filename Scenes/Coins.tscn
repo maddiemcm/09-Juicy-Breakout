@@ -18,7 +18,6 @@ load_path = "res://.import/coin.png-23e506fc535e1e81a67b247520f1351a.stex"
 
 [node name="Particles2D" type="Particles2D" parent="."]
 scale = Vector2( 0.25, 0.25 )
-emitting = false
 amount = 3
 lifetime = 4.0
 one_shot = true
