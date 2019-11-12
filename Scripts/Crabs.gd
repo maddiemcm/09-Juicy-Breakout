@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-var new_ball = preload("res://Scenes/Formula.tscn")
+var new_formula = preload("res://Scenes/Formula.tscn")
 
 func _ready():
 	set_process_input(true)
@@ -12,8 +12,8 @@ func _physics_process(delta):
 func _input(event):
 	if event is InputEventMouseButton and event.pressed:
 		if not get_parent().has_node("Formula"):
-			var ball = new_ball.instance()
-			ball.position = position - Vector2(0,20)
-			ball.name = "Formula"
-			ball.linear_velocity = Vector2(200, -200)
-			get_parent().add_child(ball)
+			var formula = new_formula.instance()
+			formula.position = position - Vector2(0,20)
+			formula.name = "Formula"
+			formula.linear_velocity = Vector2(200, -200)
+			get_parent().add_child(formula)
