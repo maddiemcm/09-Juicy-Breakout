@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=2]
+
+[sub_resource type="ParticlesMaterial" id=1]
+emission_shape = 2
+emission_box_extents = Vector3( 2, 0, 0 )
+flag_disable_z = true
+spread = 0.0
+gravity = Vector3( 0, -75, 0 )
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+scale = 0.25
+
+[sub_resource type="StreamTexture" id=2]
+flags = 4
+load_path = "res://.import/coin.png-23e506fc535e1e81a67b247520f1351a.stex"
+
+[node name="Coins" type="Node2D"]
+
+[node name="Particles2D" type="Particles2D" parent="."]
+scale = Vector2( 0.25, 0.25 )
+emitting = false
+amount = 3
+lifetime = 4.0
+one_shot = true
+speed_scale = 3.0
+process_material = SubResource( 1 )
+texture = SubResource( 2 )
