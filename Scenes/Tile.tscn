@@ -1,11 +1,7 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scripts/Tile.gd" type="Script" id=1]
 [ext_resource path="res://Assets/MoneyTile.png" type="Texture" id=2]
-[ext_resource path="res://Assets/coin.png" type="Texture" id=3]
-
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 31.809, 16.1276 )
 
 [sub_resource type="ParticlesMaterial" id=2]
 flag_disable_z = true
@@ -13,6 +9,9 @@ gravity = Vector3( 0, 98, 0 )
 angular_velocity = 1.0
 orbit_velocity = 0.0
 orbit_velocity_random = 0.0
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 31.809, 16.1276 )
 
 [node name="Tile" type="StaticBody2D" groups=[
 "Tiles",
@@ -23,6 +22,11 @@ __meta__ = {
 "_edit_group_": true
 }
 
+[node name="Coins" type="Particles2D" parent="."]
+emitting = false
+amount = 5
+process_material = SubResource( 2 )
+
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 0.451279, -0.276245 )
 scale = Vector2( 0.249391, 0.231788 )
@@ -31,10 +35,3 @@ texture = ExtResource( 2 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -0.198013, 0.198021 )
 shape = SubResource( 1 )
-
-[node name="Coins" type="Particles2D" parent="."]
-emitting = false
-amount = 4
-one_shot = true
-process_material = SubResource( 2 )
-texture = ExtResource( 3 )
