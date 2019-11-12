@@ -4,7 +4,6 @@ export var maxspeed = 300
 
 signal lives
 signal score
-signal coins
 
 func _ready():
 	contact_monitor = true

@@ -33,8 +33,10 @@ color_ramp = SubResource( 2 )
 
 [node name="Smoke" type="Particles2D" parent="."]
 scale = Vector2( 0.5, 0.5 )
+emitting = false
 amount = 1
 lifetime = 6.0
+one_shot = true
 preprocess = 0.25
 speed_scale = 4.0
 explosiveness = 1.0
