@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Formula.png-b5a8583fcb3950db06e4cf43a86754bd.stex"
+path="res://.import/MoneyTile2.png-b5206ff855ec929a9fd5965c88a95a9c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Assets/Formula.png"
-dest_files=[ "res://.import/Formula.png-b5a8583fcb3950db06e4cf43a86754bd.stex" ]
+source_file="res://Assets/MoneyTile2.png"
+dest_files=[ "res://.import/MoneyTile2.png-b5206ff855ec929a9fd5965c88a95a9c.stex" ]
 
 [params]
 

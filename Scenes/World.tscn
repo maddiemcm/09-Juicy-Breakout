@@ -1,0 +1,56 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scripts/Crabs.gd" type="Script" id=1]
+[ext_resource path="res://Assets/MrCrabs.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Formula.png" type="Texture" id=3]
+
+[sub_resource type="PhysicsMaterial" id=2]
+friction = 0.0
+bounce = 1.0
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 12.6517, 30.0061 )
+
+[node name="World" type="Node2D"]
+
+[node name="Crabs" type="KinematicBody2D" parent="."]
+position = Vector2( 529.47, 539.265 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Crabs"]
+position = Vector2( -17.6423, 13.9667 )
+scale = Vector2( 0.552302, 0.598512 )
+texture = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Crabs"]
+position = Vector2( -17.7947, 14.8978 )
+scale = Vector2( 0.79286, 0.800648 )
+polygon = PoolVector2Array( -42.4013, -15.5264, -41.0004, -29.5279, -60.7786, -28.0229, -70.1592, -14.3653, -31.6696, 18.2925, -29.1697, 32.9896, -16.6732, 43.2809, -15.2029, 52.8371, 11.2604, 52.8371, 12.7305, 43.2809, 23.7569, 35.1949, 27.8143, 15.9598, 65.1375, -12.0326, 59.3058, -29.5279, 38.3115, -31.8606, 37.7236, -14.0562, 38.4587, -14.7913, 23.1489, 6.62897, 10.5253, -31.6984, -18.1433, -32.4335, -23.5051, 6.62897 )
+
+[node name="Formula" type="RigidBody2D" parent="."]
+position = Vector2( 523.335, 423.843 )
+mode = 2
+physics_material_override = SubResource( 2 )
+gravity_scale = 0.0
+linear_velocity = Vector2( 200, -200 )
+linear_damp = 0.0
+angular_damp = 0.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Formula"]
+scale = Vector2( 0.287699, 0.28373 )
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Formula"]
+position = Vector2( 1.16632, 5.83179 )
+shape = SubResource( 1 )
+
+[node name="Wall" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wall"]
+polygon = PoolVector2Array( 0, 0, 0, 660, -60, 660, -60, -60, 1080, -60, 1080, 660, 1020, 660, 1020, 0, 0, 0 )
