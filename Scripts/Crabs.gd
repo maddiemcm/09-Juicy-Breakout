@@ -6,7 +6,7 @@ func _ready():
 	set_process_input(true)
 
 func _physics_process(delta):
-	var mouse_x = get_viewport().get_mouse_position().x
+	var mouse_x = get_viewport().get_mouse_position().x 
 	position = Vector2(mouse_x, position.y)
 	
 func _input(event):
