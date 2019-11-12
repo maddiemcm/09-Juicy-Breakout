@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scripts/Tile.gd" type="Script" id=1]
+[ext_resource path="res://Assets/MoneyTile.png" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 31.809, 16.1276 )
+
+[node name="Tile" type="StaticBody2D" groups=[
+"Tiles",
+]]
+position = Vector2( 58.9982, 302.186 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 0.451279, -0.276245 )
+scale = Vector2( 0.249391, 0.231788 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -0.198013, 0.198021 )
+shape = SubResource( 1 )

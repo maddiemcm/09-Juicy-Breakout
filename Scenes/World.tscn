@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scripts/Crabs.gd" type="Script" id=1]
 [ext_resource path="res://Assets/MrCrabs.png" type="Texture" id=2]
 [ext_resource path="res://Assets/Formula.png" type="Texture" id=3]
+[ext_resource path="res://Scenes/Tile.tscn" type="PackedScene" id=4]
 
 [sub_resource type="PhysicsMaterial" id=2]
 friction = 0.0
@@ -14,19 +15,19 @@ extents = Vector2( 12.6517, 30.0061 )
 [node name="World" type="Node2D"]
 
 [node name="Crabs" type="KinematicBody2D" parent="."]
-position = Vector2( 529.47, 539.265 )
+position = Vector2( 529.507, 542.868 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="Sprite" type="Sprite" parent="Crabs"]
-position = Vector2( -17.6423, 13.9667 )
+position = Vector2( -0.0613708, 0.185822 )
 scale = Vector2( 0.552302, 0.598512 )
 texture = ExtResource( 2 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Crabs"]
-position = Vector2( -17.7947, 14.8978 )
+position = Vector2( 0.0880737, 0.365524 )
 scale = Vector2( 0.79286, 0.800648 )
 polygon = PoolVector2Array( -42.4013, -15.5264, -41.0004, -29.5279, -60.7786, -28.0229, -70.1592, -14.3653, -31.6696, 18.2925, -29.1697, 32.9896, -16.6732, 43.2809, -15.2029, 52.8371, 11.2604, 52.8371, 12.7305, 43.2809, 23.7569, 35.1949, 27.8143, 15.9598, 65.1375, -12.0326, 59.3058, -29.5279, 38.3115, -31.8606, 37.7236, -14.0562, 38.4587, -14.7913, 23.1489, 6.62897, 10.5253, -31.6984, -18.1433, -32.4335, -23.5051, 6.62897 )
 
@@ -54,3 +55,56 @@ shape = SubResource( 1 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wall"]
 polygon = PoolVector2Array( 0, 0, 0, 660, -60, 660, -60, -60, 1080, -60, 1080, 660, 1020, 660, 1020, 0, 0, 0 )
+
+[node name="Tiles" type="Node2D" parent="."]
+
+[node name="Tile 1" type="Node2D" parent="Tiles"]
+editor/display_folded = true
+position = Vector2( 1.439, 0 )
+
+[node name="Tile" parent="Tiles/Tile 1" instance=ExtResource( 4 )]
+position = Vector2( 77.705, 264.772 )
+
+[node name="Tile2" parent="Tiles/Tile 1" instance=ExtResource( 4 )]
+position = Vector2( 195.701, 264.773 )
+
+[node name="Tile3" parent="Tiles/Tile 1" instance=ExtResource( 4 )]
+position = Vector2( 316.576, 264.773 )
+
+[node name="Tile4" parent="Tiles/Tile 1" instance=ExtResource( 4 )]
+position = Vector2( 437.45, 264.772 )
+
+[node name="Tile5" parent="Tiles/Tile 1" instance=ExtResource( 4 )]
+position = Vector2( 556.885, 264.773 )
+
+[node name="Tile6" parent="Tiles/Tile 1" instance=ExtResource( 4 )]
+position = Vector2( 677.759, 263.334 )
+
+[node name="Tile7" parent="Tiles/Tile 1" instance=ExtResource( 4 )]
+position = Vector2( 795.756, 263.334 )
+
+[node name="Tile8" parent="Tiles/Tile 1" instance=ExtResource( 4 )]
+position = Vector2( 916.63, 264.773 )
+
+[node name="Tile 2" type="Node2D" parent="Tiles"]
+
+[node name="Tile" parent="Tiles/Tile 2" instance=ExtResource( 4 )]
+position = Vector2( 138.142, 221.603 )
+
+[node name="Tile2" parent="Tiles/Tile 2" instance=ExtResource( 4 )]
+position = Vector2( 256.138, 221.603 )
+
+[node name="Tile3" parent="Tiles/Tile 2" instance=ExtResource( 4 )]
+position = Vector2( 378.452, 221.603 )
+
+[node name="Tile4" parent="Tiles/Tile 2" instance=ExtResource( 4 )]
+position = Vector2( 499.326, 223.042 )
+
+[node name="Tile5" parent="Tiles/Tile 2" instance=ExtResource( 4 )]
+position = Vector2( 618.761, 221.603 )
+
+[node name="Tile6" parent="Tiles/Tile 2" instance=ExtResource( 4 )]
+position = Vector2( 733.88, 220.164 )
+
+[node name="Tile7" parent="Tiles/Tile 2" instance=ExtResource( 4 )]
+position = Vector2( 857.632, 220.164 )
