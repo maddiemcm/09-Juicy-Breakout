@@ -6,8 +6,13 @@ func _ready():
 	set_process_input(true)
 
 func _physics_process(delta):
-	var mouse_x = get_viewport().get_mouse_position().x 
-	position = Vector2(mouse_x, position.y)
+	var mouse = get_viewport().get_mouse_position()
+	var target_x = mouse.x
+	var target_y = mouse.y
+	var vp = get_viewport().get_visible_rect().size
+	target_y = min(target_y, vp.y)
+	target_y = max(target_y, vp.y - 200)
+	position = Vector2(target_x, target_y)
 	
 func _input(event):
 	if event is InputEventMouseButton and event.pressed:

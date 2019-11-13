@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Scripts/World.gd" type="Script" id=1]
 [ext_resource path="res://Assets/krustykrab.jpg" type="Texture" id=2]
@@ -6,22 +6,21 @@
 [ext_resource path="res://Assets/MrCrabs.png" type="Texture" id=4]
 [ext_resource path="res://Scenes/Formula.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/Tile.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Scenes/Coins.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Assets/OstrichSans-Heavy.otf" type="DynamicFontData" id=8]
-[ext_resource path="res://Scripts/Score.gd" type="Script" id=9]
-[ext_resource path="res://Scripts/Lives.gd" type="Script" id=10]
+[ext_resource path="res://Assets/OstrichSans-Heavy.otf" type="DynamicFontData" id=7]
+[ext_resource path="res://Scripts/Score.gd" type="Script" id=8]
+[ext_resource path="res://Scripts/Lives.gd" type="Script" id=9]
 
 [sub_resource type="DynamicFont" id=1]
 size = 28
 extra_spacing_top = 3
 extra_spacing_char = 2
-font_data = ExtResource( 8 )
+font_data = ExtResource( 7 )
 
 [sub_resource type="DynamicFont" id=2]
 size = 28
 extra_spacing_top = 4
 extra_spacing_char = 2
-font_data = ExtResource( 8 )
+font_data = ExtResource( 7 )
 
 [node name="World" type="Node2D"]
 script = ExtResource( 1 )
@@ -104,295 +103,156 @@ rotation = 0.404916
 polygon = PoolVector2Array( 0, 0, 0, 660, -60, 660, -60, -60, 1080, -60, 1080, 660, 1020, 660, 1020, 0, 0, 0 )
 
 [node name="Tiles" type="Node2D" parent="."]
+editor/display_folded = true
 position = Vector2( 0, 0.814514 )
 
 [node name="Tile 1" type="Node2D" parent="Tiles"]
-editor/display_folded = true
 position = Vector2( 1.439, 0 )
 
 [node name="Tile" parent="Tiles/Tile 1" instance=ExtResource( 6 )]
-editor/display_folded = true
 position = Vector2( 218.561, 260 )
 
-[node name="Coins2" parent="Tiles/Tile 1/Tile" instance=ExtResource( 7 )]
-
 [node name="Tile2" parent="Tiles/Tile 1" instance=ExtResource( 6 )]
-editor/display_folded = true
 position = Vector2( 298.561, 260 )
 
-[node name="Coins2" parent="Tiles/Tile 1/Tile2" instance=ExtResource( 7 )]
-
 [node name="Tile3" parent="Tiles/Tile 1" instance=ExtResource( 6 )]
-editor/display_folded = true
 position = Vector2( 378.561, 262.175 )
 
-[node name="Coins2" parent="Tiles/Tile 1/Tile3" instance=ExtResource( 7 )]
-
 [node name="Tile4" parent="Tiles/Tile 1" instance=ExtResource( 6 )]
-editor/display_folded = true
 position = Vector2( 458.561, 262.967 )
 
-[node name="Coins2" parent="Tiles/Tile 1/Tile4" instance=ExtResource( 7 )]
-
 [node name="Tile5" parent="Tiles/Tile 1" instance=ExtResource( 6 )]
-editor/display_folded = true
 position = Vector2( 538.561, 262.373 )
 
-[node name="Coins2" parent="Tiles/Tile 1/Tile5" instance=ExtResource( 7 )]
-
 [node name="Tile6" parent="Tiles/Tile 1" instance=ExtResource( 6 )]
-editor/display_folded = true
 position = Vector2( 618.561, 263.165 )
 
-[node name="Coins2" parent="Tiles/Tile 1/Tile6" instance=ExtResource( 7 )]
-
 [node name="Tile7" parent="Tiles/Tile 1" instance=ExtResource( 6 )]
-editor/display_folded = true
 position = Vector2( 698.561, 263.363 )
 
-[node name="Coins2" parent="Tiles/Tile 1/Tile7" instance=ExtResource( 7 )]
-
 [node name="Tile8" parent="Tiles/Tile 1" instance=ExtResource( 6 )]
-editor/display_folded = true
 position = Vector2( 778.561, 263.561 )
 
-[node name="Coins2" parent="Tiles/Tile 1/Tile8" instance=ExtResource( 7 )]
-
 [node name="Tile9" parent="Tiles/Tile 1" instance=ExtResource( 6 )]
-editor/display_folded = true
 position = Vector2( 138.561, 260 )
 
-[node name="Coins2" parent="Tiles/Tile 1/Tile9" instance=ExtResource( 7 )]
-
 [node name="Tile10" parent="Tiles/Tile 1" instance=ExtResource( 6 )]
-editor/display_folded = true
 position = Vector2( 858.561, 263.759 )
 
-[node name="Coins2" parent="Tiles/Tile 1/Tile10" instance=ExtResource( 7 )]
-
 [node name="Tile 2" type="Node2D" parent="Tiles"]
-editor/display_folded = true
 
 [node name="Tile2" parent="Tiles/Tile 2" instance=ExtResource( 6 )]
-editor/display_folded = true
 position = Vector2( 180, 222.856 )
 
-[node name="Coins2" parent="Tiles/Tile 2/Tile2" instance=ExtResource( 7 )]
-
 [node name="Tile3" parent="Tiles/Tile 2" instance=ExtResource( 6 )]
-editor/display_folded = true
 position = Vector2( 260, 223.054 )
 
-[node name="Coins2" parent="Tiles/Tile 2/Tile3" instance=ExtResource( 7 )]
-
 [node name="Tile4" parent="Tiles/Tile 2" instance=ExtResource( 6 )]
-editor/display_folded = true
 position = Vector2( 340, 223.252 )
 
-[node name="Coins2" parent="Tiles/Tile 2/Tile4" instance=ExtResource( 7 )]
-
 [node name="Tile5" parent="Tiles/Tile 2" instance=ExtResource( 6 )]
-editor/display_folded = true
 position = Vector2( 420, 223.45 )
 
-[node name="Coins2" parent="Tiles/Tile 2/Tile5" instance=ExtResource( 7 )]
-
 [node name="Tile6" parent="Tiles/Tile 2" instance=ExtResource( 6 )]
-editor/display_folded = true
 position = Vector2( 500, 222.262 )
 
-[node name="Coins2" parent="Tiles/Tile 2/Tile6" instance=ExtResource( 7 )]
-
 [node name="Tile7" parent="Tiles/Tile 2" instance=ExtResource( 6 )]
-editor/display_folded = true
 position = Vector2( 580, 222.262 )
 
-[node name="Coins2" parent="Tiles/Tile 2/Tile7" instance=ExtResource( 7 )]
-
 [node name="Tile8" parent="Tiles/Tile 2" instance=ExtResource( 6 )]
-editor/display_folded = true
 position = Vector2( 660, 222.46 )
 
-[node name="Coins2" parent="Tiles/Tile 2/Tile8" instance=ExtResource( 7 )]
-
 [node name="Tile9" parent="Tiles/Tile 2" instance=ExtResource( 6 )]
-editor/display_folded = true
 position = Vector2( 740, 223.648 )
 
-[node name="Coins2" parent="Tiles/Tile 2/Tile9" instance=ExtResource( 7 )]
-
 [node name="Tile10" parent="Tiles/Tile 2" instance=ExtResource( 6 )]
-editor/display_folded = true
 position = Vector2( 820, 223.846 )
 
-[node name="Coins2" parent="Tiles/Tile 2/Tile10" instance=ExtResource( 7 )]
-
 [node name="Tile 3" type="Node2D" parent="Tiles"]
-editor/display_folded = true
 
 [node name="Tile2" parent="Tiles/Tile 3" instance=ExtResource( 6 )]
-editor/display_folded = true
 position = Vector2( 220, 180.396 )
 
-[node name="Coins2" parent="Tiles/Tile 3/Tile2" instance=ExtResource( 7 )]
-
 [node name="Tile3" parent="Tiles/Tile 3" instance=ExtResource( 6 )]
-editor/display_folded = true
 position = Vector2( 300, 180.594 )
 
-[node name="Coins2" parent="Tiles/Tile 3/Tile3" instance=ExtResource( 7 )]
-
 [node name="Tile4" parent="Tiles/Tile 3" instance=ExtResource( 6 )]
-editor/display_folded = true
 position = Vector2( 380, 180.792 )
 
-[node name="Coins2" parent="Tiles/Tile 3/Tile4" instance=ExtResource( 7 )]
-
 [node name="Tile5" parent="Tiles/Tile 3" instance=ExtResource( 6 )]
-editor/display_folded = true
 position = Vector2( 459.802, 180.99 )
 
-[node name="Coins2" parent="Tiles/Tile 3/Tile5" instance=ExtResource( 7 )]
-
 [node name="Tile6" parent="Tiles/Tile 3" instance=ExtResource( 6 )]
-editor/display_folded = true
 position = Vector2( 539.802, 181.188 )
 
-[node name="Coins2" parent="Tiles/Tile 3/Tile6" instance=ExtResource( 7 )]
-
 [node name="Tile7" parent="Tiles/Tile 3" instance=ExtResource( 6 )]
-editor/display_folded = true
 position = Vector2( 619.802, 181.386 )
 
-[node name="Coins2" parent="Tiles/Tile 3/Tile7" instance=ExtResource( 7 )]
-
 [node name="Tile8" parent="Tiles/Tile 3" instance=ExtResource( 6 )]
-editor/display_folded = true
 position = Vector2( 699.802, 181.584 )
 
-[node name="Coins2" parent="Tiles/Tile 3/Tile8" instance=ExtResource( 7 )]
-
 [node name="Tile9" parent="Tiles/Tile 3" instance=ExtResource( 6 )]
-editor/display_folded = true
 position = Vector2( 779.802, 180 )
 
-[node name="Coins2" parent="Tiles/Tile 3/Tile9" instance=ExtResource( 7 )]
-
 [node name="Tile 4" type="Node2D" parent="Tiles"]
-editor/display_folded = true
 
 [node name="Tile" parent="Tiles/Tile 4" instance=ExtResource( 6 )]
-editor/display_folded = true
 position = Vector2( 260, 140.198 )
 
-[node name="Coins2" parent="Tiles/Tile 4/Tile" instance=ExtResource( 7 )]
-
 [node name="Tile2" parent="Tiles/Tile 4" instance=ExtResource( 6 )]
-editor/display_folded = true
 position = Vector2( 339.802, 140 )
 
-[node name="Coins2" parent="Tiles/Tile 4/Tile2" instance=ExtResource( 7 )]
-
 [node name="Tile3" parent="Tiles/Tile 4" instance=ExtResource( 6 )]
-editor/display_folded = true
 position = Vector2( 420, 140 )
 
-[node name="Coins2" parent="Tiles/Tile 4/Tile3" instance=ExtResource( 7 )]
-
 [node name="Tile4" parent="Tiles/Tile 4" instance=ExtResource( 6 )]
-editor/display_folded = true
 position = Vector2( 500, 140 )
 
-[node name="Coins2" parent="Tiles/Tile 4/Tile4" instance=ExtResource( 7 )]
-
 [node name="Tile5" parent="Tiles/Tile 4" instance=ExtResource( 6 )]
-editor/display_folded = true
 position = Vector2( 579.802, 140 )
 
-[node name="Coins2" parent="Tiles/Tile 4/Tile5" instance=ExtResource( 7 )]
-
 [node name="Tile6" parent="Tiles/Tile 4" instance=ExtResource( 6 )]
-editor/display_folded = true
 position = Vector2( 660, 140 )
 
-[node name="Coins2" parent="Tiles/Tile 4/Tile6" instance=ExtResource( 7 )]
-
 [node name="Tile7" parent="Tiles/Tile 4" instance=ExtResource( 6 )]
-editor/display_folded = true
 position = Vector2( 739.802, 140 )
 
-[node name="Coins2" parent="Tiles/Tile 4/Tile7" instance=ExtResource( 7 )]
-
 [node name="Tile 5" type="Node2D" parent="Tiles"]
-editor/display_folded = true
 
 [node name="Tile" parent="Tiles/Tile 5" instance=ExtResource( 6 )]
-editor/display_folded = true
 position = Vector2( 300, 100 )
 
-[node name="Coins2" parent="Tiles/Tile 5/Tile" instance=ExtResource( 7 )]
-
 [node name="Tile2" parent="Tiles/Tile 5" instance=ExtResource( 6 )]
-editor/display_folded = true
 position = Vector2( 380, 100 )
 
-[node name="Coins2" parent="Tiles/Tile 5/Tile2" instance=ExtResource( 7 )]
-
 [node name="Tile3" parent="Tiles/Tile 5" instance=ExtResource( 6 )]
-editor/display_folded = true
 position = Vector2( 459.604, 100.198 )
 
-[node name="Coins2" parent="Tiles/Tile 5/Tile3" instance=ExtResource( 7 )]
-
 [node name="Tile4" parent="Tiles/Tile 5" instance=ExtResource( 6 )]
-editor/display_folded = true
 position = Vector2( 539.604, 100.198 )
 
-[node name="Coins2" parent="Tiles/Tile 5/Tile4" instance=ExtResource( 7 )]
-
 [node name="Tile5" parent="Tiles/Tile 5" instance=ExtResource( 6 )]
-editor/display_folded = true
 position = Vector2( 619.604, 100.396 )
-
-[node name="Coins2" parent="Tiles/Tile 5/Tile5" instance=ExtResource( 7 )]
 
 [node name="Tile6" parent="Tiles/Tile 5" instance=ExtResource( 6 )]
 position = Vector2( 699.604, 100 )
 
-[node name="Coins2" parent="Tiles/Tile 5/Tile6" instance=ExtResource( 7 )]
-
 [node name="Tile 6" type="Node2D" parent="Tiles"]
-editor/display_folded = true
 
 [node name="Tile" parent="Tiles/Tile 6" instance=ExtResource( 6 )]
-editor/display_folded = true
 position = Vector2( 340, 60 )
 
-[node name="Coins2" parent="Tiles/Tile 6/Tile" instance=ExtResource( 7 )]
-
 [node name="Tile2" parent="Tiles/Tile 6" instance=ExtResource( 6 )]
-editor/display_folded = true
 position = Vector2( 419.802, 60 )
 
-[node name="Coins2" parent="Tiles/Tile 6/Tile2" instance=ExtResource( 7 )]
-
 [node name="Tile3" parent="Tiles/Tile 6" instance=ExtResource( 6 )]
-editor/display_folded = true
 position = Vector2( 499.802, 60 )
 
-[node name="Coins2" parent="Tiles/Tile 6/Tile3" instance=ExtResource( 7 )]
-
 [node name="Tile4" parent="Tiles/Tile 6" instance=ExtResource( 6 )]
-editor/display_folded = true
 position = Vector2( 579.604, 60 )
 
-[node name="Coins2" parent="Tiles/Tile 6/Tile4" instance=ExtResource( 7 )]
-
 [node name="Tile5" parent="Tiles/Tile 6" instance=ExtResource( 6 )]
-editor/display_folded = true
 position = Vector2( 660, 60.198 )
-
-[node name="Coins2" parent="Tiles/Tile 6/Tile5" instance=ExtResource( 7 )]
 
 [node name="Score" type="Label" parent="."]
 margin_left = 20.0
@@ -401,7 +261,7 @@ margin_right = 93.0
 margin_bottom = 40.0
 custom_fonts/font = SubResource( 1 )
 text = "Score: "
-script = ExtResource( 9 )
+script = ExtResource( 8 )
 
 [node name="Lives" type="Label" parent="."]
 margin_left = 920.0
@@ -410,4 +270,4 @@ margin_right = 985.0
 margin_bottom = 37.0
 custom_fonts/font = SubResource( 2 )
 text = "Lives: "
-script = ExtResource( 10 )
+script = ExtResource( 9 )

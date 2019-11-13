@@ -9,6 +9,7 @@ var six = preload("res://Assets/MoneyTile2.png")
 
 onready var sprite = get_node("Sprite")
 var score = 10
+var dying = 0
 
 func _ready():
 	if get_parent().name == "Tile 1":
@@ -28,3 +29,16 @@ func _ready():
 	if get_parent().name == "Tile 6":
 		sprite.set_texture(six)
 		score = 100
+
+func _process(delta):
+	if dying:
+		dying += 1
+	if dying > 120:
+		queue_free()
+		
+
+func die():
+	dying = 1
+	$CollisionShape2D.queue_free()
+	$Sprite.queue_free()
+	
