@@ -17,6 +17,3 @@ func _input(event):
 			formula.name = "Formula"
 			formula.linear_velocity = Vector2(200, -200)
 			get_parent().add_child(formula)
-			var puff = load("res://Scenes/Puff.tscn").instance()
-			puff.emitting = true
-			get_parent().add_child(puff)

@@ -99,13 +99,11 @@ polygon = PoolVector2Array( -42.4013, -15.5264, -41.0004, -29.5279, -60.7786, -2
 rotation = 0.404916
 
 [node name="Wall" type="StaticBody2D" parent="."]
-editor/display_folded = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wall"]
 polygon = PoolVector2Array( 0, 0, 0, 660, -60, 660, -60, -60, 1080, -60, 1080, 660, 1020, 660, 1020, 0, 0, 0 )
 
 [node name="Tiles" type="Node2D" parent="."]
-editor/display_folded = true
 position = Vector2( 0, 0.814514 )
 
 [node name="Tile 1" type="Node2D" parent="Tiles"]
