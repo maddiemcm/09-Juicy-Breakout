@@ -3,17 +3,17 @@
 [ext_resource path="res://Scripts/Formula.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Formula.png" type="Texture" id=2]
 
-[sub_resource type="PhysicsMaterial" id=2]
+[sub_resource type="PhysicsMaterial" id=1]
 friction = 0.0
 bounce = 1.0
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 12.6517, 30.0061 )
 
 [node name="Formula" type="RigidBody2D"]
 position = Vector2( 523.335, 423.843 )
 mode = 2
-physics_material_override = SubResource( 2 )
+physics_material_override = SubResource( 1 )
 gravity_scale = 0.0
 linear_velocity = Vector2( 200, -200 )
 linear_damp = 0.0
@@ -29,4 +29,4 @@ texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 1.16632, 5.83179 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
