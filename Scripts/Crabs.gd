@@ -10,8 +10,8 @@ func _physics_process(delta):
 	var target_x = mouse.x
 	var target_y = mouse.y
 	var vp = get_viewport().get_visible_rect().size
-	target_y = min(target_y, vp.y)
-	target_y = max(target_y, vp.y - 200)
+	target_y = min(target_y, vp.y - 50)
+	target_y = max(target_y, vp.y - 125)
 	position = Vector2(target_x, target_y)
 	
 func _input(event):
@@ -22,3 +22,4 @@ func _input(event):
 			formula.name = "Formula"
 			formula.linear_velocity = Vector2(200, -200)
 			get_parent().add_child(formula)
+			#find_node("/root/World/Formula/Puff/Smoke").emitting = true

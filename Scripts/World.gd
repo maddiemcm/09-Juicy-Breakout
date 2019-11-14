@@ -8,6 +8,7 @@ func increase_score(s):
 	find_node("Score").update_score()
 	if score == 2000:
 		get_tree().change_scene("res://Scenes/Victory.tscn")
+		lives += 1
 		
 func decrease_lives():
 	lives -= 1

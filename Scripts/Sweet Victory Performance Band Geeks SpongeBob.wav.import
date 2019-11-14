@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Sweet Victory Performance Band Geeks SpongeBob.wav-bbd594d5c71925521f04fa78e1b1369a.sample"
+
+[deps]
+
+source_file="res://Scripts/Sweet Victory Performance Band Geeks SpongeBob.wav"
+dest_files=[ "res://.import/Sweet Victory Performance Band Geeks SpongeBob.wav-bbd594d5c71925521f04fa78e1b1369a.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

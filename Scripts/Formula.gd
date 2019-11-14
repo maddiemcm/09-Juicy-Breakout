@@ -1,9 +1,13 @@
 extends RigidBody2D
 
-export var maxspeed = 300
+export var max_speed = 500.0
 
 signal lives
 signal score
+
+func _integrate_forces(state):
+    if state.linear_velocity.length() > max_speed:
+        state.linear_velocity = state.linear_velocity.normalized() * max_speed
 
 func _ready():
 	contact_monitor = true
